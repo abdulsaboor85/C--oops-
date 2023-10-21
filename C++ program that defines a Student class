@@ -1,0 +1,55 @@
+/*Write a C++ program that defines a class called Student with the following private attributes:
+
+name (a string to store the student's name)
+age (an integer to store the student's age)
+grade (a character to store the student's grade, e.g., 'A', 'B', 'C')
+The Student class should have the following public methods:
+
+A constructor that initializes the name, age, and grade attributes.
+A method printInfo that prints the student's name, age, and grade to the console.
+In your main function, create an instance of the Student class, set the attributes, and then call the printInfo method to display the student's information on the screen.
+
+Write the C++ program to accomplish this task.*/
+
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+class  Student 
+{   
+    private:
+     string name;
+     int age;
+     string grade;
+    
+    
+    public:
+    Student(string n ,int a,string g)
+    {
+        name = n;
+        age = a;
+        grade = g;
+    }
+    
+    void printInfo ();
+    
+    
+};
+
+void Student :: printInfo()
+
+    {
+        cout <<"NAME : "<<name<<endl;
+        cout <<"age : "<<age<<endl;
+        cout<<"grade : "<<grade<<endl;
+    }
+
+int main()
+{
+    Student s1("ABDUL SABOOR ",20,"A+");
+    
+    s1.printInfo();
+    
+    return 0;
+}
